@@ -1,4 +1,4 @@
-package lib
+package reactor_tcp_server
 
 import (
 	ants "github.com/panjf2000/ants/v2"

@@ -1,4 +1,4 @@
-package lib
+package reactor_tcp_server
 
 import (
 	"fmt"
@@ -26,13 +26,11 @@ type Server struct {
 
 var (
 	defaultConnectCallback = func(server *Server, conn *Connection) {
-		log.Infof("new client connected")
 	}
 	defaultStartCallback = func(server *Server) {
 		log.Info("server started")
 	}
 	defaultMessageCallback = func(server *Server, conn *Connection, msg []byte) {
-		log.Infof("new client message: %s", string(msg))
 		conn.Write(msg)
 	}
 	defaultErrorCallback = func(server *Server, conn *Connection, err error) {

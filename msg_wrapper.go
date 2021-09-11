@@ -1,4 +1,4 @@
-package lib
+package reactor_tcp_server
 
 import (
 	"encoding/binary"

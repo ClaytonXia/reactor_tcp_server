@@ -1,4 +1,4 @@
-package lib
+package reactor_tcp_server
 
 import (
 	"os"
@@ -95,7 +95,6 @@ func (conn *Connection) Write(msg []byte) {
 }
 
 func (conn *Connection) Close() {
-	log.Info("client disconnected")
 	conn.connFile.Close()
 	_ = conn.Epoller.Remove(conn)
 	_ = unix.Close(conn.connFd)

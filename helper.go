@@ -1,4 +1,4 @@
-package lib
+package reactor_tcp_server
 
 func wrapErrorCallback(server *Server, conn *Connection, err error, errFunc func(*Server, *Connection, error)) func() {
 	return func() {
